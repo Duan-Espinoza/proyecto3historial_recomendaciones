@@ -1,5 +1,4 @@
-# proyecto3historial_recomendaciones
-Implementación de unaaplicación que registre gustos e historial de los usuarios y, a partir de eso, realizar las recomendaciones
+
 
 <!-- PROJECT LOGO -->
 <br />
@@ -8,7 +7,7 @@ Implementación de unaaplicación que registre gustos e historial de los usuario
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Firma_TEC.svg/1200px-Firma_TEC.svg.png" alt="Logo" width="500" height="80">
   </a>
 
-  <h3 align="center">Proyecto #2 Sistema hotelero</h3>
+  <h3 align="center">Proyecto #3 Sistema hotelero</h3>
 
   <p align="center">
     Lenguajes de programación
