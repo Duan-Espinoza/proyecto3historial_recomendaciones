@@ -1,5 +1,3 @@
-
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -7,7 +5,7 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Firma_TEC.svg/1200px-Firma_TEC.svg.png" alt="Logo" width="500" height="80">
   </a>
 
-  <h3 align="center">Proyecto #3 Sistema hotelero</h3>
+  <h3 align="center">Proyecto #3 Historial Recomendaciones</h3>
 
   <p align="center">
     Lenguajes de programación
@@ -27,7 +25,7 @@
     I Semestre 2023
   </p> 
   <p align="center">
-    Aplicación de escritorio que administra la gestión hotelera utilizando el lenguaje Haskell y la Programación Funcional
+    Aplicación de escritorio que administra recomendaciones utilizando lenguaje Prolog y programación lógica.
   </p> 
   <p align="center">
   <p align="center">
