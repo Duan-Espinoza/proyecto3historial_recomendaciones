@@ -189,18 +189,18 @@ ejecutar_opcion_general(3) :-
     writeln('Regresar al menu general'),
     ejecutar_opcion(2).
 
-% Entradas:
-% Salidas:
-% Restricciones:
-% Objetivo: 
+% Entradas: Un entero
+% Salidas: Regresa a menu principal
+% Restricciones: Ninguna
+% Objetivo: Permitir al usuario regresar al menu principal
 %-
 ejecutar_opcion_general(4) :-
     inicio.
 
-% Entradas:
-% Salidas:
-% Restricciones:
-% Objetivo: 
+% Entradas: Un entero
+% Salidas: Un mensaje en consola
+% Restricciones: Ninguna
+% Objetivo: Indicar al usuario un error al indicar la opcion
 %-
 ejecutar_opcion_general(_) :-
     writeln('Opcion invalida. Intente de nuevo.'),
@@ -211,10 +211,10 @@ ejecutar_opcion_general(_) :-
 %-------------------------------------------------------------------------------------------------------------
 
 % Opciones del menu de peliculas------------------------------------------------------------------------------------------------------------------------------
-% Entradas:
-% Salidas:
-% Restricciones:
-% Objetivo: 
+% Entradas: Un entero
+% Salidas: Muestra la lista de todas las peliculas de la base de datos
+% Restricciones: Ninguna
+% Objetivo: Permitir al administrador consultar todas las peliculas de la base de datos
 %-
 ejecutarMenuPeliculas(1):-
     writeln('*****************************************************'),
