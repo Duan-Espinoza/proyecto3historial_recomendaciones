@@ -11,6 +11,7 @@
 % Salidas: Muestra el menu Principal
 % Restricciones: el menu se despliega al ser consultado el predicado inicio desde la consola de swi prolog
 % Objetivo: Mostrar el menu principal
+%-
 inicio :-
     printAsteriscos(1).
     writeln('*********************************************'),
@@ -26,7 +27,7 @@ inicio :-
 % Salidas: Despliega las opciones del menu administrativo
 % Restricciones: El usuario debe indicar el la opcion del menu que coincida con las opciones
 % Objetivo: Mostrar al usuario las opciones del menu administrativo
-
+%-
 ejecutar_opcion(1) :-
     writeln('*********************************************'),
     writeln('1. Gestion de peliculas'),
@@ -43,7 +44,7 @@ ejecutar_opcion(1) :-
 % Salidas: Despliega las opciones del menu general
 % Restricciones: El usuario debe indicar el la opcion del menu que coincida con las opciones
 % Objetivo: Mostrar al usuario las opciones del menu general
-
+%-
 ejecutar_opcion(2) :-
     writeln('*********************************************'),
     writeln('1. Buscar produccion'),
@@ -57,7 +58,7 @@ ejecutar_opcion(2) :-
 % Salidas: Muestra un mensaje de despedida al salir del sistema
 % Restricciones: Ninguna
 % Objetivo: Mostrar un mensaje de despedida
-
+%-
 ejecutar_opcion(3) :-
     writeln('Gracias por usar el sistema. Hasta pronto!').
 
@@ -65,7 +66,7 @@ ejecutar_opcion(3) :-
 % Salidas: Muestra un mensaje de error
 % Restricciones: Ninguna
 % Objetivo: Indicar al usuario que ha seleccionado una opcion incorrecta dentro del menu principal
-
+%-
 ejecutar_opcion(_) :-
     writeln('Opcion invalida. Intente de nuevo.'),
     inicio.
@@ -74,9 +75,9 @@ ejecutar_opcion(_) :-
 % Ejecutar opciones seleccionadas en el Menu Administrativo---------------------------------------------------------------------------------------------
 % Entradas: Un entero que indica que el usuario selecciono esta opcion en el menu administrativo
 % Salidas: Mostrar al usuario el menu de gestion de peliculas    
-% Restricciones: El usuario debe indicar el la opcion del menu que coincida con las opciones
+% Restricciones: Por cada pelicula el usuario debe indicar el nombre, genero, actor principal y director
 % Objetivo: Permitir al usuario la gestion de peliculas
-
+%-
 ejecutar_opcion_administrativa(1) :-
     writeln('*********************************************'),
     writeln('Mostrar lista de peliculas.'),
@@ -86,9 +87,9 @@ ejecutar_opcion_administrativa(1) :-
 
 % Entradas:  Un entero que indica que el usuario selecciono esta opcion en el menu administrativo
 % Salidas: Muestra al usuario el menu de gestion de series
-% Restricciones: El usuario debe indicar el la opcion del menu que coincida con las opciones
+% Restricciones: El usuario debe indicar el nombre,     genero, actor principal y director de la pelicula
 % Objetivo: Permitir al usuario la gestion de series
-
+%-
 ejecutar_opcion_administrativa(2) :-
     writeln('**********************************************'),
     writeln('Mostrar lista de series.'),
@@ -96,46 +97,57 @@ ejecutar_opcion_administrativa(2) :-
     writeln('Regresar al menu administrativo'),
     ejecutar_opcion(1).
 
-% Entradas:
-% Salidas:
-% Restricciones:
-% Objetivo: 
-
+% Entradas: Un entero
+% Salidas: Despliega al usuario el menu para agregar una nueva cancion
+% Restricciones: Para cada cancion el usuario debe indicar el nombre, genero, cantante y productor
+% Objetivo: Permitir al usuario gestionar las canciones
+%-
 ejecutar_opcion_administrativa(3) :-
-    writeln('Opcion no implementada.'),
+    writeln('***********************************************'),
+    writeln('Mostrar la lista de canciones'),
+    writeln('Agregar una nueva cancion'),
+    writeln('Regresar al menu administrativo'),
     ejecutar_opcion(1).
 
-% Entradas:
-% Salidas:
-% Restricciones:
-% Objetivo: 
-
+% Entradas: Un valor entero
+% Salidas: Muestra el menu de gestion de usuarios
+% Restricciones:  Por cada nuevo usuario el administrador debe indicar el nombre 
+% --------------  Para peliculas debe indicar 8 numeros entre 1 y 10 para definir su afinidad con los generos de peliculas
+% --------------  Para series debe indicar 9 numeros entre 1 y 10 para definir su afinidad con los generos de series
+% --------------  Para canciones debe indicar 8 numeros entre 1 y 10 para definir su afinidad con los generos musicales
+% Objetivo: Permitir al administrador agregar nuevos usuarios a la base de conocimientos
+%-
 ejecutar_opcion_administrativa(4) :-
-    writeln('Opcion no implementada.'),
+    writeln('************************************************'),
+    writeln('Mostrar Lista de Usuarios'),
+    writeln('Agregar un nuevo usuario'),
+    writeln('Regresar al menu administrativo'),
     ejecutar_opcion(1).
 
-% Entradas:
-% Salidas:
-% Restricciones:
-% Objetivo: 
-
+% Entradas: Un entero
+% Salidas: Muestra el historial de reproducciones de la base de datos
+% Restricciones: Se muestra el nombre de usuario, tipo de produccion, nombre del titulo y la calificacion asignada por el usuario
+% Objetivo: Permitir al administrador ver todas las reproducciones hechas por los usuarios
+%-
 ejecutar_opcion_administrativa(5) :-
-    writeln('Opcion no implementada.'),
+    writeln('***********************************************'),
+    writeln('Historial de reproducciones'),
+    writeln('Nombre del usuario            Tipo de produccion              Nombre del Titulo             Calificacion asignada por el usuario'),
     ejecutar_opcion(1).
 
-% Entradas:
-% Salidas:
-% Restricciones:
-% Objetivo: 
-
+% Entradas: Un entero
+% Salidas: Regresa al menu principal
+% Restricciones: Ninguna
+% Objetivo: Permitir al usuario regresar al menu principal
+%-
 ejecutar_opcion_administrativa(6) :-
     inicio.
 
-% Entradas:
-% Salidas:
-% Restricciones:
-% Objetivo: 
-
+% Entradas: Un entero
+% Salidas: Un mensaje de error
+% Restricciones: Ninguna
+% Objetivo: Indicar la usuario que esta ingresando una opcion invalida
+%-
 ejecutar_opcion_administrativa(_) :-
     writeln('Opcion invalida. Intente de nuevo.'),
     ejecutar_opcion(1).
@@ -146,7 +158,7 @@ ejecutar_opcion_administrativa(_) :-
 % Salidas:
 % Restricciones:
 % Objetivo: 
-
+%-
 ejecutar_opcion_general(1) :-
     writeln('Opcion no implementada.'),
     ejecutar_opcion(2).
@@ -155,7 +167,7 @@ ejecutar_opcion_general(1) :-
 % Salidas:
 % Restricciones:
 % Objetivo: 
-
+%-
 ejecutar_opcion_general(2) :-
     writeln('Opcion no implementada.'),
     ejecutar_opcion(2).
@@ -164,7 +176,7 @@ ejecutar_opcion_general(2) :-
 % Salidas:
 % Restricciones:
 % Objetivo: 
-
+%-
 ejecutar_opcion_general(3) :-
     writeln('Opcion no implementada.'),
     ejecutar_opcion(2).
@@ -173,7 +185,7 @@ ejecutar_opcion_general(3) :-
 % Salidas:
 % Restricciones:
 % Objetivo: 
-
+%-
 ejecutar_opcion_general(4) :-
     inicio.
 
@@ -181,7 +193,7 @@ ejecutar_opcion_general(4) :-
 % Salidas:
 % Restricciones:
 % Objetivo: 
-
+%-
 ejecutar_opcion_general(_) :-
     writeln('Opcion invalida. Intente de nuevo.'),
     ejecutar_opcion(2).
@@ -191,16 +203,16 @@ ejecutar_opcion_general(_) :-
 % Salidas:
 % Restricciones:
 % Objetivo: 
-
+%-
 ejecutarMenuPeliculas(1):-
     writeln('*****************************************************'),
     writeln('Se muestran todas las peliculas en la base de datos').
 
-% Entradas:
-% Salidas:
-% Restricciones:
-% Objetivo: 
-
+% Entradas: Un entero
+% Salidas: Permite a el usuario agregar una pelicula nueva
+% Restricciones: El usuario debe indicar el nombre, genero,actor principal y director de la pelicula
+% Objetivo: Ampliar la base de conocimientos sobre peliculas
+%-
 ejecutarMenuPeliculas(2):-
     writeln('*****************************************************'),
     writeln('Agregar nueva pelicula').
@@ -209,7 +221,7 @@ ejecutarMenuPeliculas(2):-
 % Salidas: Retorna del menu de pelicula al menu administrativo
 % Restricciones: El usuario debe indicar la opcion de volver
 % Objetivo: Regresar el usuario d elas opciones de gestion de peliculas a las opciones administrativas
-
+%-
 ejecutarMenuPeliculas(3):-
 ejecutar_opcion(1).
 
@@ -217,7 +229,7 @@ ejecutar_opcion(1).
 % Salidas: Imprime un mensaje de error de input
 % Restricciones: Ninguna
 % Objetivo: Indicar al usuario que la opcion ingresada no es valida
-
+%-
 ejecutarMenuPeliculas(_):-
     writeln('Opcion invalida, intente de nuevo.'),
     ejecutar_opcion_administrativa(1).
