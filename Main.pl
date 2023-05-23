@@ -160,7 +160,11 @@ ejecutar_opcion_administrativa(_) :-
 % Objetivo: 
 %-
 ejecutar_opcion_general(1) :-
-    writeln('Opcion no implementada.'),
+    writeln('-------------------------------------------------------------------------'),
+    writeln('Buscar pelicula'),
+    writeln('Buscar serie'),
+    writeln('Buscar cancion'),
+    writeln('Regresar al menu general'),
     ejecutar_opcion(2).
 
 % Entradas:
@@ -169,7 +173,9 @@ ejecutar_opcion_general(1) :-
 % Objetivo: 
 %-
 ejecutar_opcion_general(2) :-
-    writeln('Opcion no implementada.'),
+    writeln('-------------------------------------------------------------------------'),
+    writeln('Recomendaciones'),
+    writeln('Regresar al menu general'),
     ejecutar_opcion(2).
 
 % Entradas:
@@ -178,7 +184,9 @@ ejecutar_opcion_general(2) :-
 % Objetivo: 
 %-
 ejecutar_opcion_general(3) :-
-    writeln('Opcion no implementada.'),
+    writeln('-------------------------------------------------------------------------'),
+    writeln('Registrar reproduccion')
+    writeln('Regresar al menu general'),
     ejecutar_opcion(2).
 
 % Entradas:
