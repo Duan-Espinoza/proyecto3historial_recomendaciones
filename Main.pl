@@ -206,7 +206,7 @@ menu_general :-
   write('Seleccione una opción:'), nl,
   write('1. Buscar producción'), nl,
   write('2. Recomendar'), nl,
-  write('3. Registrar actividad'), nl,
+  write('3. Registrar reproducción'), nl,
   write('4. Volver al menú principal'), nl,
   read(Eleccion),
   opcion_general(Eleccion).
