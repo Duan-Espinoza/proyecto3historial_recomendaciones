@@ -42,3 +42,5 @@ imprimir_series([Serie|Series]) :-
 % **************Referencias**************
 % https://www.swi-prolog.org/pldoc/man?predicate=dynamic%2f1
 % https://stackoverflow.com/questions/2426678/dynamic-predicate-in-prolog
+% https://www.educba.com/prolog-assert/
+% https://stackoverflow.com/questions/65851820/how-to-set-the-utf-8-for-the-code-file-pl-in-swi-prolog-desktop
