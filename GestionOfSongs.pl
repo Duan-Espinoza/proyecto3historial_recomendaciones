@@ -4,6 +4,7 @@
 :- dynamic cancion/4.
 
 % Predicado para verificar que el género sea válido 
+% Generos usados para la validacion
 genero_valido(clasica).
 genero_valido(jazz).
 genero_valido(rhythm).
@@ -33,13 +34,19 @@ insertar_cancion :-
     agregar_cancion(Nombre, Genero, Artista, Productor), % agrega la canción a la base de conocimiento
     write('La canción ha sido agregada a la base de conocimiento.'), nl.
 
-% Predicado para agregar una canción a la base de conocimiento
+% Predicado para agregar una canción a la BC 
+% E: Parametros
+% S: Datos en BC
+% R: ....................
 agregar_cancion(Nombre, Genero, Artista, Productor) :-
     genero_valido(Genero),
     % Agregar la canción como un hecho en la base de conocimiento
     assertz(cancion(Nombre, Genero, Artista, Productor)).
 
 % Mostrar todas las canciones almacenadas en la base de conocimiento
+% E: Parametros
+% S: Datos en consola
+% R: ......................
 mostrar_canciones :-
     % Encontrar todas las canciones que están almacenadas en la base de conocimiento
     findall(cancion(Nombre, Genero, Artista, Productor), cancion(Nombre, Genero, Artista, Productor), Canciones),
@@ -51,6 +58,9 @@ mostrar_canciones :-
     ).
 
 % Mostrar una lista de canciones
+% E: Parametros
+% S: Datos en consola
+% R: ......................
 imprimir_canciones([]).
 imprimir_canciones([Cancion|Canciones]) :-
     write(Cancion), nl,

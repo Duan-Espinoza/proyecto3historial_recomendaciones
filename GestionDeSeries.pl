@@ -1,7 +1,11 @@
 % Predicado para verificar que el género sea válido
+% Generos de series validos
 genero_valido(A) :- member(A, [accion, comedia, drama, fantasia, terror, suspenso, musical, historia, reality_show]).
 
 % Ingresa la serie
+% E: Datos del usuario
+% S: Muestra en consola que ha sido agregado
+% R: ........... Valor a agregar a la base de conocimiento.
 insert_series :-
     write('Agregar serie:'), nl,
     write('Nombre: '),
@@ -17,12 +21,18 @@ insert_series :-
     write('La serie ha sido agregada a la base de conocimiento.'), nl.
 
 % Predicado para agregar una serie a la base de conocimiento
+% E: Parametros
+% S: Muestra en consola que ha sido agregado
+% R: ........... Valor a agregar a la base de conocimiento.
 agregar_serie(Nombre, Genero, Actor, Director) :-
     genero_valido(Genero),
     % Agregar la serie como un hecho en la base de conocimiento
     assertz(serie(Nombre, Genero, Actor, Director)).
 
-% Mostrar todas las series almacenadas en la base de conocimiento
+% Mostrar todas las series almacenadas en la BC
+% E: Parametros
+% S: Muestra en consola 
+% R: ...........
 mostrar_series :-
     % Encontrar todas las series que están almacenadas en la base de conocimiento
     findall(serie(Nombre, Genero, Actor, Director), serie(Nombre, Genero, Actor, Director), Series),
@@ -34,6 +44,9 @@ mostrar_series :-
     ).
 
 % Mostrar una lista de series
+% E: ..................
+% S: Muestra en consola las series
+% R: ...........
 imprimir_series([]).
 imprimir_series([Serie|Series]) :-
     write(Serie), nl,

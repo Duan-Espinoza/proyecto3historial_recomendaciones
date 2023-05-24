@@ -8,6 +8,9 @@
 genero_valido(Genero) :- member(Genero, [accion, comedia, drama, fantasia, terror, suspenso, musical, historia]).
 
 % Ingresa la película
+% E: Datos del usuario
+% S: Mensaje de confirmacion
+% R: Genero 
 insert_peliculas :-
   write('Agregar película:'), nl,
   write('Nombre: '),
@@ -22,11 +25,17 @@ insert_peliculas :-
   agregar_pelicula(Nombre, Genero, ActorPrincipal, Director), % agrega la película a la base de conocimiento
   write('La película ha sido agregada a la base de conocimiento.'), nl.
 
-% Predicado para agregar una película a la base de conocimiento
+% Predicado para agregar una película a la BC 
+% E: Parametros 
+% S: Funcionalidad ejecutada
+% R: .........................
 agregar_pelicula(Nombre, Genero, ActorPrincipal, Director) :-
     assertz(pelicula(Nombre, Genero, ActorPrincipal, Director)).
 
 % Mostrar todas las películas almacenadas en la base de conocimiento
+% E: Parametros
+% S: Datos en consola
+% R: ......................
 mostrar_peliculas :-
     findall(pelicula(Nombre, Genero, ActorPrincipal, Director), pelicula(Nombre, Genero, ActorPrincipal, Director), Peliculas),
     (   Peliculas = []
@@ -35,6 +44,9 @@ mostrar_peliculas :-
     ).
 
 % Mostrar una lista de películas
+% E: Parametros
+% S: Datos en consola
+% R: ......................
 imprimir_peliculas([]).
 imprimir_peliculas([Pelicula|Peliculas]) :-
     write(Pelicula), nl,

@@ -1,5 +1,5 @@
 % Esta funcionalidad no se logro implementar
-
+% No sirve
 % Test
 :- dynamic reproduccion/4.
 
