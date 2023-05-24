@@ -38,3 +38,7 @@ imprimir_series([]).
 imprimir_series([Serie|Series]) :-
     write(Serie), nl,
     imprimir_series(Series).
+
+% **************Referencias**************
+% https://www.swi-prolog.org/pldoc/man?predicate=dynamic%2f1
+% https://stackoverflow.com/questions/2426678/dynamic-predicate-in-prolog

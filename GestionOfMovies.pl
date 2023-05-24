@@ -39,3 +39,7 @@ imprimir_peliculas([]).
 imprimir_peliculas([Pelicula|Peliculas]) :-
     write(Pelicula), nl,
     imprimir_peliculas(Peliculas).
+
+% **************Referencias**************
+% https://www.swi-prolog.org/pldoc/man?predicate=dynamic%2f1
+% https://stackoverflow.com/questions/2426678/dynamic-predicate-in-prolog
