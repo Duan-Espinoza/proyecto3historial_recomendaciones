@@ -115,7 +115,7 @@ menu_peliculas :-
 
 % Predicado que se llama según la elección del usuario en el menú de gestión de películas
 opcion_peliculas(1) :-
-  insert_peliculas,
+  insert_pelis,
   menu_peliculas.
 
 opcion_peliculas(2) :-
@@ -293,7 +293,7 @@ opcion_principal(_) :-
 :- consult('Historial.pl').
 
 % Predicado para insertar una película
-insert_peliculas :-
+insert_pelis :-
   write('Ingrese el título de la película: '),
   read(Titulo),
   write('Ingrese el año de lanzamiento: '),
