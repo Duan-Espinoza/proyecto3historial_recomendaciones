@@ -7,7 +7,7 @@
 % El cuarto argumento es lista pares (Género, Afinidad)
 
 % Predicado para mostrar todos los usuarios registrados
-mostrar_usuarios :-
+mostrar_users :-
     findall([Nombre, Peliculas, Series, Canciones], usuario(Nombre, Peliculas, Series, Canciones), Usuarios),
     imprimir_usuarios(Usuarios).
 

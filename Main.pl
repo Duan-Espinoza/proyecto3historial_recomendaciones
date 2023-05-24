@@ -185,7 +185,7 @@ opcion_usuarios(1) :-
   menu_usuarios.
 
 opcion_usuarios(2) :-
-  mostrar_usuarios,
+  mostrar_users,
   menu_usuarios.
 
 opcion_usuarios(3) :-
@@ -372,12 +372,12 @@ agregar_usuario :-
   write('Usuario agregado correctamente.'), nl.
 
 % Predicado para mostrar todos los usuarios
-mostrar_usuarios :-
+mostrar_users :-
   usuario(NombreUsuario, Contrasena),
   format('Nombre de usuario: ~w~nContraseña: ~w~n~n', [NombreUsuario, Contrasena]),
   fail. % falla intencionalmente para detener la busqueda
 
-mostrar_usuarios :-
+mostrar_users :-
   write('No hay más usuarios registrados.'), nl.
 
 % Predicado para ver el historial de reproducciones
