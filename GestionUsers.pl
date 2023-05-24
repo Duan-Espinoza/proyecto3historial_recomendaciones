@@ -4,7 +4,7 @@
 
 % Hechos para almacenar los usuarios y sus preferencias
 % usuario(Nombre, [GenerosPeliculas], [GenerosSeries], [GenerosCanciones])
-% El cuarto argumento es una lista de pares (Género, Afinidad)
+% El cuarto argumento es lista pares (Género, Afinidad)
 
 % Predicado para mostrar todos los usuarios registrados
 mostrar_usuarios :-
@@ -12,6 +12,9 @@ mostrar_usuarios :-
     imprimir_usuarios(Usuarios).
 
 % Predicado para imprimir la información de los usuarios
+% E: Parametros
+% S: Muestra en consola
+% R: ...........
 imprimir_usuarios([]).
 imprimir_usuarios([[Nombre, Peliculas, Series, Canciones] | Resto]) :-
     write('Nombre: '), write(Nombre), nl,
@@ -21,6 +24,9 @@ imprimir_usuarios([[Nombre, Peliculas, Series, Canciones] | Resto]) :-
     imprimir_usuarios(Resto).
 
 % Predicado para agregar un nuevo usuario
+% E: Parametros
+% S: Muestra en consola que ha sido agregado
+% R: ...........
 agregar_usuario :-
     write('Ingrese el nombre del usuario: '),
     read(Nombre),
