@@ -159,7 +159,7 @@ menu_canciones :-
 
 % Predicado que se llama según la elección del usuario en el menú de gestión de canciones
 opcion_canciones(1) :-
-  insert_canciones,
+  insert_songs,
   menu_canciones.
 
 opcion_canciones(2) :-
@@ -341,7 +341,7 @@ mostrar_series :-
   write('No hay más series registradas.'), nl.
 
 % Predicado para insertar una canción
-insert_canciones :-
+insert_songs :-
   write('Ingrese el título de la canción: '),
   read(Titulo),
   write('Ingrese el artista: '),
