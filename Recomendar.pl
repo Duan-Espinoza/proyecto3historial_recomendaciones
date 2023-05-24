@@ -80,4 +80,10 @@ registrar_reproduccion :-
   write('Reproducción registrada con éxito.'), nl.
 
 
-% Resto del código...
+reproduccion_mas_de_una_vez(Usuario, Titulo) :-
+  findall(Titulo, reproduccion(Usuario, Titulo), Reproducciones),
+  length(Reproducciones, Cantidad),
+  Cantidad > 1.
+
+
+% Resto del código...si hay que modificar
