@@ -14,7 +14,7 @@
 %-
 
 
-% Cargar los modulos
+% Cargar de los modulos
 :- consult('GestionOfMovies.pl').
 :- consult('GestionDeSeries.pl').
 :- consult('GestionOfSongs.pl').
@@ -23,13 +23,17 @@
 :- consult('RegistraLaReproduccion.pl').
 :- consult('Recomendar.pl').
 
+% Para mayor simplificacion del trabajo, se decidio
+% Separar las diversas funcionalidades en modulos
 
 % Predicado principal que inicia el programa
 inicio :- menu_principal.
 
 % Agregar directiva de codificación UTF-8
 :- encoding(utf8).
-
+% ***************************************************
+% Interfaz en consola del menu principal
+% ---------------------------------------------------
 % Predicado que muestra el menú principal y recibe la elección del usuario
 menu_principal :-
   write('************************************************'),
@@ -59,6 +63,9 @@ opcion_principal(_) :-
   menu_principal.
 
 % Menú administrativo
+% ***************************************************
+% Interfaz en consola del menu admi
+% ---------------------------------------------------
 % E: Digito
 % S: Redireccion a la funcionalidad
 % R: Solo digito valido
@@ -102,6 +109,9 @@ opcion_administrativo(_) :-
   menu_administrativo.
 
 % Menú de gestión de películas
+% ***************************************************
+% Interfaz en consola del menu pelis
+% ---------------------------------------------------
 % E: Digito
 % S: Redireccion a la funcionalidad
 % R: Solo digito valido
@@ -127,6 +137,9 @@ opcion_peliculas(3) :-
   menu_administrativo.
 
 % Menú de gestión de series
+% ***************************************************
+% Interfaz en consola del menu series
+% ---------------------------------------------------
 menu_series :-
   write('Seleccione una opción:'), nl,
   write('1. Agregar serie'), nl,
@@ -148,7 +161,10 @@ opcion_series(3) :-
   write('Volviendo al menú administrativo.'), nl,
   menu_administrativo.
 
-% Menú de gestión de canciones
+% Menú de gestión de songs
+% ***************************************************
+% Interfaz en consola del menu songs
+% ---------------------------------------------------
 menu_canciones :-
   write('Seleccione una opción:'), nl,
   write('1. Agregar canción'), nl,
@@ -171,6 +187,9 @@ opcion_canciones(3) :-
   menu_administrativo.
 
 % Menú de gestión de usuarios
+% ***************************************************
+% Interfaz en consola del menu users
+% ---------------------------------------------------
 menu_usuarios :-
   write('Seleccione una opción:'), nl,
   write('1. Agregar usuario'), nl,
@@ -193,6 +212,10 @@ opcion_usuarios(3) :-
   menu_administrativo.
 
 % Menú de historial
+% ***************************************************
+% Interfaz en consola del menu historial
+% No es funcional
+% ---------------------------------------------------
 menu_historial :-
   write('Seleccione una opción:'), nl,
   write('1. Ver historial de reproducciones'), nl,
@@ -214,6 +237,9 @@ opcion_historial(_) :-
   menu_historial.
 
 % Menú general
+% ***************************************************
+% Interfaz en consola del menu general
+% ---------------------------------------------------
 menu_general :-
   write('Seleccione una opción:'), nl,
   write('1. Buscar producción'), nl,
