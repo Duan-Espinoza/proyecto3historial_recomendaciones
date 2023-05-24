@@ -27,7 +27,7 @@ imprimir_usuarios([[Nombre, Peliculas, Series, Canciones] | Resto]) :-
 % E: Parametros
 % S: Muestra en consola que ha sido agregado
 % R: ...........
-agregar_usuario :-
+agregar_users :-
     write('Ingrese el nombre del usuario: '),
     read(Nombre),
     write('Ingrese los géneros de películas que le gustan (separados por comas): '),

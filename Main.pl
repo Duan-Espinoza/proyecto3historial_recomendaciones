@@ -181,7 +181,7 @@ menu_usuarios :-
 
 % Predicado que se llama según la elección del usuario en el menú de gestión de usuarios
 opcion_usuarios(1) :-
-  agregar_usuario,
+  agregar_users,
   menu_usuarios.
 
 opcion_usuarios(2) :-
@@ -363,7 +363,7 @@ mostrar_canciones :-
   write('No hay más canciones registradas.'), nl.
 
 % Predicado para agregar un usuario
-agregar_usuario :-
+agregar_users :-
   write('Ingrese el nombre de usuario: '),
   read(NombreUsuario),
   write('Ingrese la contraseña: '),
