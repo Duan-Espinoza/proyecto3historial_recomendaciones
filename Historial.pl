@@ -1,4 +1,6 @@
-% aqui va el historial
+% Esta funcionalidad no se logro implementar
+
+% Test
 :- dynamic reproduccion/4.
 
 % Registra una reproducción en el historial

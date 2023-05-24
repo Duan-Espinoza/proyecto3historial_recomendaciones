@@ -32,6 +32,7 @@ inicio :- menu_principal.
 
 % Predicado que muestra el menú principal y recibe la elección del usuario
 menu_principal :-
+  write('************************************************'),
   write('Seleccione una opción:'), nl,
   write('1. Menú Administrativo'), nl,
   write('2. Menú General'), nl,
@@ -40,10 +41,12 @@ menu_principal :-
   opcion_principal(Eleccion).
 
 % Predicado que se llama según la elección del usuario en el menú principal
+% Eleccion 1 que lleva al menu admi
 opcion_principal(1) :-
   menu_administrativo,
   menu_principal.
 
+% Eleccion 2 que lleva a menu general
 opcion_principal(2) :-
   menu_general,
   menu_principal.
@@ -56,6 +59,9 @@ opcion_principal(_) :-
   menu_principal.
 
 % Menú administrativo
+% E: Digito
+% S: Redireccion a la funcionalidad
+% R: Solo digito valido
 menu_administrativo :- 
   write('Seleccione una opción:'), nl,
   write('1. Gestión de películas'), nl,
@@ -96,6 +102,9 @@ opcion_administrativo(_) :-
   menu_administrativo.
 
 % Menú de gestión de películas
+% E: Digito
+% S: Redireccion a la funcionalidad
+% R: Solo digito valido
 menu_peliculas :-
   write('Seleccione una opción:'), nl,
   write('1. Agregar película'), nl,

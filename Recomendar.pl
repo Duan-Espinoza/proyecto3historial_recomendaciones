@@ -1,4 +1,6 @@
 % Recomendar.pl
+% Funcionalidad con errores 
+% No sirve
 
 % Base de datos para almacenar las reproducciones
 :- dynamic(reproducciones/1).
