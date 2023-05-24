@@ -1,5 +1,15 @@
 % Recomendar.pl
 
+% Base de datos para almacenar las reproducciones
+:- dynamic(reproducciones/1).
+reproducciones([]).
+
+% Definición del predicado reproduccion/3
+reproduccion(Usuario, Pelicula, Fecha) :-
+  % Agregar la reproducción a la lista de reproducciones
+  assertz(reproducciones(reproduccion(Usuario, Pelicula, Fecha))).
+
+
 % Importar los modulos de gestión de series, películas, canciones
 :- consult('GestionDeSeries.pl').
 :- consult('GestionOfMovies.pl').
