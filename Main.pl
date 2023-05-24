@@ -20,6 +20,9 @@
 :- consult('GestionOfSongs.pl').
 :- consult('GestionUsers.pl').
 :- consult('Historial.pl').
+:- consult('RegistraLaReproduccion.pl')
+:- consult('Recomendar.pl').
+
 
 % Predicado principal que inicia el programa
 inicio :- menu_principal.
@@ -223,8 +226,12 @@ opcion_general(2) :-
   menu_general.
 
 opcion_general(3) :-
-  write('Ha elegido la opción 3 (Registrar actividad).'), nl,
-  % Aquí iría el código correspondiente a registrar actividad
+  write('Ha elegido la opción 3 (Registrar reproducción).'), nl,
+  write('Ingrese el nombre de usuario: '),
+  read(Usuario),
+  write('Ingrese el título de la producción: '),
+  read(Titulo),
+  registrar_reproduccion(Usuario, Titulo),
   menu_general.
 
 opcion_general(4) :-
