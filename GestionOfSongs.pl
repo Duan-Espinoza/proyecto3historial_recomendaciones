@@ -16,7 +16,9 @@ genero_valido(pop).
 genero_valido(reggae).
 genero_valido(hip_hop).
 
-%Ingresa una canción
+% Entrada: Datos de usuario
+% Salida Ingresa la canción a la base de conocimiento 
+% Restricciones: Genero valido
 insertar_cancion :-  
     write('Agregar canción:'), nl,
     write('Nombre: '),
@@ -24,23 +26,23 @@ insertar_cancion :-
     write('Género: '),
     read(Genero),
     genero_valido(Genero), % valida que el género sea válido
-    write('Cantante: '),
-    read(Cantante),
+    write('Artista: '),
+    read(Artista),
     write('Productor: '),
     read(Productor),
-    agregar_cancion(Nombre, Genero, Cantante, Productor), % agrega la canción a la base de conocimiento
+    agregar_cancion(Nombre, Genero, Artista, Productor), % agrega la canción a la base de conocimiento
     write('La canción ha sido agregada a la base de conocimiento.'), nl.
 
 % Predicado para agregar una canción a la base de conocimiento
-agregar_cancion(Nombre, Genero, Cantante, Productor) :-
+agregar_cancion(Nombre, Genero, Artista, Productor) :-
     genero_valido(Genero),
     % Agregar la canción como un hecho en la base de conocimiento
-    assertz(cancion(Nombre, Genero, Cantante, Productor)).
+    assertz(cancion(Nombre, Genero, Artista, Productor)).
 
 % Mostrar todas las canciones almacenadas en la base de conocimiento
 mostrar_canciones :-
     % Encontrar todas las canciones que están almacenadas en la base de conocimiento
-    findall(cancion(Nombre, Genero, Cantante, Productor), cancion(Nombre, Genero, Cantante, Productor), Canciones),
+    findall(cancion(Nombre, Genero, Artista, Productor), cancion(Nombre, Genero, Artista, Productor), Canciones),
     % Verificar si la lista de canciones está vacía
     (   Canciones = []
     ->  write('No hay canciones almacenadas en la base de conocimiento.')
