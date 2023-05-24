@@ -267,10 +267,10 @@ opcion_principal(_) :-
 :- encoding(utf8).
 
 % Cargar los modulos
-:- consult('GestionPeliculas.pl').
-:- consult('GestionSeries.pl').
-:- consult('GestionCanciones.pl').
-:- consult('GestionUsuarios.pl').
+:- consult('GestionOfMovies.pl').
+:- consult('GestionDeSeries.pl').
+:- consult('GestionOfSongs.pl').
+:- consult('GestionUsers.pl').
 :- consult('Historial.pl').
 
 % Predicado para insertar una película
@@ -365,7 +365,7 @@ mostrar_usuarios :-
 ver_historial :-
   reproduccion(Usuario, Titulo),
   format('Usuario: ~w~nTítulo: ~w~n~n', [Usuario, Titulo]),
-  fail. % falla intencionalmente para detener la busqueda
+  fail. % falla intencional para detener la busqueda
 
 ver_historial :-
   write('No hay más reproducciones en el historial.'), nl.
