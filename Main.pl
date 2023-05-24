@@ -222,8 +222,11 @@ opcion_general(1) :-
 
 opcion_general(2) :-
   write('Ha elegido la opción 2 (Recomendar).'), nl,
-  % Aquí iría el código correspondiente a recomendar producciones
+  write('Ingrese el nombre de usuario: '),
+  read(Usuario),
+  recomendar_titulos(Usuario),
   menu_general.
+
 
 opcion_general(3) :-
   write('Ha elegido la opción 3 (Registrar reproducción).'), nl,
