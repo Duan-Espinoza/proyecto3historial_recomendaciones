@@ -408,9 +408,7 @@ mostrar_users :-
 
 % Predicado para ver el historial de reproducciones
 ver_historial :-
-  reproduccion(Usuario, Titulo),
-  format('Usuario: ~w~nTítulo: ~w~n~n', [Usuario, Titulo]),
-  fail. % falla intencional para detener la busqueda
+  write('No hay más reproducciones en el historial.'), nl.
 
 ver_historial :-
   write('No hay más reproducciones en el historial.'), nl.
