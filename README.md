@@ -32,7 +32,7 @@
     Puede acceder al documento escrito de este proyecto mediante el siguiente enlace:
   </p>
   <p align="center">
-    [https://docs.google.com/document/d/1Zzu3Nw5M8crIqrYXd77AkPjRXiAKUMUNLv2B8jMRwTw/edit?usp=sharing](https://docs.google.com/document/d/1ClcedZUvPQIJSQo-z_hvnqWqZLJGDzaJMrkcz-8wxyY/edit?usp=sharing)
+    https://docs.google.com/document/d/1ClcedZUvPQIJSQo-z_hvnqWqZLJGDzaJMrkcz-8wxyY/edit?usp=sharing
   </p>
   <p align="center">
 </div>

@@ -20,7 +20,7 @@
 :- consult('GestionOfSongs.pl').
 :- consult('GestionUsers.pl').
 :- consult('Historial.pl').
-:- consult('RegistraLaReproduccion.pl')
+:- consult('RegistraLaReproduccion.pl').
 :- consult('Recomendar.pl').
 
 
